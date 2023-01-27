@@ -495,7 +495,6 @@ class gradeimport_csv_load_data {
                 continue;
             }
 
-            $this->studentid = null;
             // Array to hold all grades to be inserted.
             $this->newgrades = array();
             // Array to hold all feedback.
@@ -529,10 +528,6 @@ class gradeimport_csv_load_data {
                 if ($this->status === false) {
                     return $this->status;
                 }
-            }
-
-            if($this->studentid == null){
-                continue;
             }
 
             // No user mapping supplied at all, or user mapping failed.
